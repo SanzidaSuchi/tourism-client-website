@@ -10,6 +10,9 @@ import AuthProvider from './contexts/AuthProvider';
 import Footer from "./components/Footer/Footer";
 import Login from './components/login/Login';
 import SignUp from './components/signup/SignUp';
+import PrivateRoute from './components/PrivateRoute/PrivateRoute';
+import ServiceDetails from './components/ServiceDetails/ServiceDetails';
+import AddServices from './components/AddServices/AddServices';
 
 
 function App() {
@@ -32,16 +35,23 @@ function App() {
         <Route  path="/services">
         <Services></Services>
         </Route>
+        <Route  path="/addServices">
+        <AddServices></AddServices>
+        </Route>
         <Route  path="/login">
         <Login></Login>
         </Route>
         <Route  path="/signup">
         <SignUp></SignUp>
         </Route>
+        <PrivateRoute  path="/details/:serviceId">
+       <ServiceDetails></ServiceDetails>
+        </PrivateRoute>
        
         <Route  path="*">
         <NotFound></NotFound>
-        </Route>
+        </Route> 
+
         </Switch>
         <Footer></Footer>
       </Router>

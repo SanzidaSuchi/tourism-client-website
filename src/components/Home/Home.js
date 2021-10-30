@@ -4,6 +4,7 @@ import Service from '../Service/Service';
 import useAuth from '../../hooks/useAuth';
 import Package from '../Package/Package';
 import Services from '../Services/Services';
+import About from '../About/About';
 
 const Home = () => {
     const { services } = useAuth();
@@ -54,6 +55,7 @@ const Home = () => {
         </Container>
         <Services></Services>
         <Package></Package>
+        <About></About>
         </div>
     );
 };

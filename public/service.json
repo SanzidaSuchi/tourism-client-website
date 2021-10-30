@@ -1,0 +1,54 @@
+[
+    {
+        "id": 1,
+        "name": "Sydne skyline",
+        "price": "23$",
+        "description": "obokash is an online travel community of Bangladesh aviation and travel industries that working with the global B2B travel marketplace.",
+        "img": "https://i.ibb.co/vsj3xDq/Sydney-skyline-at-twilight-Panorama-of-the-Sydney-Skyline-The-Sydney-Opera-House-small-on-the-left-s.jpg"
+    },
+    {
+        "id": 2,
+        "name": "Barcelona nativity",
+        "price": "24$",
+        "description": "obokash is an online travel community of Bangladesh aviation and travel industries that working with the global B2B travel marketplace.",
+        "img": "https://i.ibb.co/TMTfP8K/Cathedral-of-La-Sagrada-Familia-It-is-designed-by-architect-Antonio-Gaudi-and-is-being-build-since-1.jpg"
+    },
+    {
+        "id": 3,
+        "name": "Blue mosque istanbul",
+        "price": "25$",
+        "description": "obokash is an online travel community of Bangladesh aviation and travel industries that working with the global B2B travel marketplace.",
+        "img": "https://i.ibb.co/MpYQNsN/Blue-Mosque-in-Istanbul-Turkey.jpg"
+    },
+    {
+        "id": 4,
+        "name": "Golden gate Bride,francisco",
+        "pricw": "26$",
+        "description": "obokash is an online travel community of Bangladesh aviation and travel industries that working with the global B2B travel marketplace.",
+        "img": "https://i.ibb.co/YBykM7K/Golden-Gate-Bridge-San-Francisco.jpg"
+    },
+    {
+        "id": 5,
+        "name": "Kawkaguchiki,japan",
+        "price": "63$",
+        "description": "obokash is an online travel community of Bangladesh aviation and travel industries that working with the global B2B travel marketplace.",
+        "img": "https://i.ibb.co/8mXH38T/Colorful-Autumn-Season-and-Mountain-Fuji-with-morning-fog-and-red-leaves-at-lake-Kawaguchiko-is-one.jpg"
+    },
+    {
+        "id": 6,
+        "name": "Paul revese statu,boston",
+        "price": "45$",
+        "description": "obokash is an online travel community of Bangladesh aviation and travel industries that working with the global B2B travel marketplace. ",
+        "img": "https://i.ibb.co/yQmW5rb/Paul-revere-Statue-and-the-Old-North-Church-Boston-Massachusetts.jpg"
+    }
+   
+]
+
+
+
+
+
+
+
+
+

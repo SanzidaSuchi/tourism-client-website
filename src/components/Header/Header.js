@@ -1,8 +1,10 @@
 import React from 'react';
-import { Container, Nav, Navbar, NavDropdown, NavLink } from 'react-bootstrap';
 import logo from "./../../images/logo.png";
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap';
+
 import HeaderBG from "./../../images/header-bg.png";
 import useAuth from '../../hooks/useAuth';
+import { NavLink } from 'react-router-dom';
 
 const Header = () => {
   const  {
@@ -10,39 +12,62 @@ const Header = () => {
    } = useAuth();
     const {user, logOut} = allContext;
     const { displayName, photoURL, email } = user;
+    const active = {
+      color: "#ff136f",
+      borderBottom: "2px solid #ff136f",
+    };
+    const navStyle = {
+      textDecoration: "none",
+      margin: "0 8px",
+      color: "white",
+      fontSize: "17px",
+      fontWeight: "bold",
+      textTransform: "Uppercase",
+    };
   return (
     <div>
       <Navbar style={{ background: `url(${HeaderBG})`}} expand="lg">
         <Container>
-   
           <Navbar.Brand as={NavLink} className="text-white" to="/home">
-            <img width="70px" src={logo} alt="Logo" />
+            <img width="100px" src={logo} alt="Logo" />
           </Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="ms-auto align-items-center">
-              <Nav.Link as={NavLink} to="/home" className="text-white">
+            <Nav className="ms-auto  align-items-center">
+              <Nav.Link as={NavLink} to="/home" className="text-white"
+              style={navStyle}
+              activeStyle={active}>
                 Home
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/products" className="text-white">
+              <Nav.Link as={NavLink} to="/products" className="text-white"
+              style={navStyle}
+              activeStyle={active}>
                 Products
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/contact" className="text-white">
+              <Nav.Link as={NavLink} to="/contact" className="text-white"
+              style={navStyle}
+              activeStyle={active}>
                 Contact
               </Nav.Link>
-              <Nav.Link as={NavLink} to="/services" className="text-white">
+              <Nav.Link as={NavLink} to="/services" className="text-white"
+              style={navStyle}
+              activeStyle={active}>
                 Services
               </Nav.Link>
 
               {!email ? (
                 <>
-                  <Nav.Link as={NavLink} to="/signup" className="text-white">
+                  <Nav.Link as={NavLink} to="/signup" className="text-white"
+                  style={navStyle}
+                  activeStyle={active}>
                     Sign Up
                   </Nav.Link>
 
-                  <Nav.Link className="text-white" as={NavLink} to="/login">
+                  <Nav.Link className="text-white" as={NavLink} to="/login"
+                  style={navStyle}
+                  activeStyle={active}>
                     Log In
                   </Nav.Link>
                 </>

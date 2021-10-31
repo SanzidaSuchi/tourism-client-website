@@ -12,15 +12,15 @@ const ServiceDetails = () => {
 
 
     useEffect(() =>{
-        fetch('http://localhost:5000/services')
+        fetch('https://spooky-warlock-50028.herokuapp.com/services')
         .then(res => res.json())
         .then(data => setPlaces(data))
     },[])
 
     /* take input and send to server */
     const onSubmit = data => {
-        console.log(data)
-        axios.post('http://localhost:5000/orders', data)
+    data.status = "Pending"
+        axios.post('https://spooky-warlock-50028.herokuapp.com/orders', data)
         .then(res => {
             if (res.data.insertedId) {
                 reset();

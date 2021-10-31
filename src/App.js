@@ -14,6 +14,7 @@ import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AddServices from './components/AddServices/AddServices';
 import MyOrder from './components/myOrder/MyOrder';
+import ManageAll from './components/manageAll/ManageAll';
 
 
 function App() {
@@ -47,6 +48,9 @@ function App() {
         </Route>
         <Route  path="/myOrder">
         <MyOrder></MyOrder>
+        </Route>
+        <Route  path="/manageAll">
+        <ManageAll></ManageAll>
         </Route>
         <PrivateRoute  path="/details/:serviceId">
        <ServiceDetails></ServiceDetails>

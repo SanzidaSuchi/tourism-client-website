@@ -5,7 +5,7 @@ import { NavLink } from "react-router-dom";
 
 
 function Service(props) {
-  const { id,name, img, price, description} = props.service;
+  const { _id,name, img, price, description} = props.service;
   
   return (
     <Col className="my-2" md={4}>
@@ -19,7 +19,7 @@ function Service(props) {
             </p>
             
             <div className="d-flex justify-content-center">
-              <NavLink to={`/details/${id}`} className="w-50 btn btn-primary">
+              <NavLink to={`/details/${_id}`} className="w-50 btn btn-primary">
                 Booking 
               </NavLink>
             </div>

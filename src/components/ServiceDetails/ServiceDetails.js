@@ -1,26 +1,35 @@
-import React from 'react';
+import axios from 'axios';
+import React, { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import useFirebase from '../../hooks/useFirebase';
 
 const ServiceDetails = () => {
     const { user } = useFirebase();
-    const {
-        register,
-        handleSubmit,
-        watch,
-        formState: { errors },
-      } = useForm();
-      const onSubmit = (data) => {
-        fetch("http://localhost:5000/addCustomer", {
-          method: "POST",
-          headers: { "content-type": "application/json" },
-          body: JSON.stringify(data),
+    const [places, setPlaces] = useState([]);
+    const { register, handleSubmit , reset} = useForm();
+    // const {detailID} = useParams();
+
+
+    useEffect(() =>{
+        fetch('http://localhost:5000/services')
+        .then(res => res.json())
+        .then(data => setPlaces(data))
+    },[])
+
+    /* take input and send to server */
+    const onSubmit = data => {
+        console.log(data)
+        axios.post('http://localhost:5000/orders', data)
+        .then(res => {
+            if (res.data.insertedId) {
+                reset();
+                alert("Successfully Added")
+                /* Modal gonna open */
+                // setOpen(true);
+            }
         })
-          .then((res) => res.json())
-          .then((result) => console.log(result));
-        console.log(data);
-      };
+    };
     return (
         <div>
         <h1 className="mt-5 text-center text-info">
@@ -41,6 +50,7 @@ const ServiceDetails = () => {
                   {...register("email", { required: true })}
                   placeholder="Email"
                   className="p-2 m-2"
+                  value={user?.email}
                 />
                 <br />
                 <input
@@ -62,7 +72,6 @@ const ServiceDetails = () => {
                   className="p-2 m-2"
                 />
                 <br />
-                {errors.exampleRequired && <span>This field is required</span>}
   
                 <input type="submit" className="btn btn-info w-50" />
               </form>

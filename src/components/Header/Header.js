@@ -40,7 +40,7 @@ const Header = () => {
                 Home
               </Nav.Link>
 
-              <Nav.Link as={NavLink} to="/addService" className="text-white"
+              <Nav.Link as={NavLink} to="/addServices" className="text-white"
               style={navStyle}
               activeStyle={active}>
                 Add NewService

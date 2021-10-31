@@ -13,6 +13,7 @@ import SignUp from './components/signup/SignUp';
 import PrivateRoute from './components/PrivateRoute/PrivateRoute';
 import ServiceDetails from './components/ServiceDetails/ServiceDetails';
 import AddServices from './components/AddServices/AddServices';
+import MyOrder from './components/myOrder/MyOrder';
 
 
 function App() {
@@ -43,6 +44,9 @@ function App() {
         </Route>
         <Route  path="/signup">
         <SignUp></SignUp>
+        </Route>
+        <Route  path="/myOrder">
+        <MyOrder></MyOrder>
         </Route>
         <PrivateRoute  path="/details/:serviceId">
        <ServiceDetails></ServiceDetails>
